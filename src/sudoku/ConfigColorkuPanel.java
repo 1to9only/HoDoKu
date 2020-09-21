@@ -311,17 +311,17 @@ public class ConfigColorkuPanel extends javax.swing.JPanel {
         chooseColor(1);
     }//GEN-LAST:event_v2ButtonActionPerformed
 
-    private void v4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_v4ButtonActionPerformed
+    private void v3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_v3ButtonActionPerformed
         chooseColor(2);
+    }//GEN-LAST:event_v3ButtonActionPerformed
+
+    private void v4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_v4ButtonActionPerformed
+        chooseColor(3);
     }//GEN-LAST:event_v4ButtonActionPerformed
 
     private void v5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_v5ButtonActionPerformed
-        chooseColor(3);
-    }//GEN-LAST:event_v5ButtonActionPerformed
-
-    private void v3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_v3ButtonActionPerformed
         chooseColor(4);
-    }//GEN-LAST:event_v3ButtonActionPerformed
+    }//GEN-LAST:event_v5ButtonActionPerformed
 
     private void v6ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_v6ButtonActionPerformed
         chooseColor(5);
