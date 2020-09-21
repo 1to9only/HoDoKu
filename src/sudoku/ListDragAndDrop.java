@@ -52,6 +52,7 @@ public class ListDragAndDrop implements DragSourceListener, DropTargetListener, 
     private DropTarget dropTarget;
     private int draggedIndex = -1;
     private StepConfig dropTargetCell;
+	@SuppressWarnings("rawtypes")
     private JList list;
     private ListDragAndDropChange panel;
     private JPanel cPanel;
@@ -61,7 +62,7 @@ public class ListDragAndDrop implements DragSourceListener, DropTargetListener, 
         supportedFlavors = new DataFlavor[] { stepConfigDataFlavor };
     }
     
-    @SuppressWarnings("LeakingThisInConstructor")
+	@SuppressWarnings({"LeakingThisInConstructor","rawtypes"})
     public ListDragAndDrop(JList list, ListDragAndDropChange panel, JPanel cPanel) {
         this.list = list;
         this.panel = panel;

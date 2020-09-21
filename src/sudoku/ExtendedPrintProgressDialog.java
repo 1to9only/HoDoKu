@@ -82,8 +82,10 @@ public class ExtendedPrintProgressDialog extends javax.swing.JDialog implements 
     /** The textfields with the number of puzzles for all sections */
     private JTextField[] numberTextFields;
     /** The levels of the puzzles for all sections */
+	@SuppressWarnings("rawtypes")
     private JComboBox[] levelComboBoxes;
     /** The modes of the puzzles for all sections */
+	@SuppressWarnings("rawtypes")
     private JComboBox[] modeComboBoxes;
     /** The candidate checkboxes for all sections */
     private JCheckBox[] candCheckBoxes;
@@ -147,6 +149,7 @@ public class ExtendedPrintProgressDialog extends javax.swing.JDialog implements 
      * @param printBooklet
      * @param manualDuplex  
      */
+	@SuppressWarnings("rawtypes")
     public ExtendedPrintProgressDialog(java.awt.Frame parent, boolean modal,
             JTextField[] numberTextFields, JComboBox[] levelComboBoxes,
             JComboBox[] modeComboBoxes, JCheckBox[] candCheckBoxes,

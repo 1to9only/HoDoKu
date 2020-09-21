@@ -1123,7 +1123,7 @@ public class SudokuPanel extends javax.swing.JPanel implements Printable {
             }
         }
     }
-
+	@SuppressWarnings("fallthrough")
     public void handleKeys(KeyEvent evt) {
         // Undo/Redo: alten Zustand speichern, wenn nichts geï¿½ndert wurde, wieder entfernen
         boolean changed = false;

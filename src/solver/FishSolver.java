@@ -296,7 +296,7 @@ public class FishSolver extends AbstractSolver {
             coverStack[i] = new CoverStackEntry();
         }
     }
-
+	@SuppressWarnings("fallthrough")
     @Override
     protected SolutionStep getStep(SolutionType type) {
         SolutionStep result = null;

@@ -46,6 +46,7 @@ import javax.swing.ListCellRenderer;
  * 
  * @author hobiwan
  */
+@SuppressWarnings("rawtypes")
 public class ExtendedPrintDialog extends javax.swing.JDialog {
 
     /** Images for Layout selection */
