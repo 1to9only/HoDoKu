@@ -252,26 +252,16 @@ public final class Options {
     //SudokuPanel
     // Coloring Solver
     public static final Color[] COLORING_COLORS = {
-        new Color(255, 192, 89),  // 'a' - first color of first color pair
-        new Color(247, 222, 143), // 'A' - second color of first color pair
-        new Color(177, 165, 243), // 'b' - first color of second color pair
-        new Color(220, 212, 252), // 'B' - second color of second color pair
-        new Color(247, 165, 167), // 'c' - first color of third color pair
-        new Color(255, 210, 210), // 'C' - second color of third color pair
-        new Color(134, 232, 208), // 'd' - first color of fourth color pair
-        new Color(206, 251, 237), // 'D' - second color of fourth color pair
-        new Color(134, 242, 128), // 'e' - first color of fifth color pair
-        new Color(215, 255, 215) // 'E' - second color of fifth color pair
-    //        new Color(140, 198, 255),   // 'a' - first color of first color pair
-    //        new Color(205, 171, 255),   // 'A' - second color of first color pair
-    //        new Color(255, 164, 119),   // 'b' - first color of second color pair
-    //        new Color(190, 124, 124),   // 'B' - second color of second color pair
-    //        new Color(130, 130, 130),   // 'c' - first color of third color pair
-    //        new Color(130,  30, 130),   // 'C' - second color of third color pair
-    //        new Color(140, 140, 140),   // 'd' - first color of fourth color pair
-    //        new Color(140,  40, 140),   // 'D' - second color of fourth color pair
-    //        new Color(168, 255, 168),   // 'e' - first color of fifth color pair
-    //        new Color(215, 255, 215)    // 'E' - second color of fifth color pair
+        new Color(255, 188,  81), // 'a' - first color of first color pair
+        new Color(255, 227, 173), // 'A' - second color of first color pair
+        new Color(179, 168, 239), // 'b' - first color of second color pair
+        new Color(223, 217, 252), // 'B' - second color of second color pair
+        new Color(255, 147, 168), // 'c' - first color of third color pair
+        new Color(255, 207, 215), // 'C' - second color of third color pair
+        new Color(142, 219, 255), // 'd' - first color of fourth color pair
+        new Color(187, 248, 255), // 'D' - second color of fourth color pair
+        new Color(122, 239, 122), // 'e' - first color of fifth color pair
+        new Color(178, 255, 178)  // 'E' - second color of fifth color pair
     };
     public static final boolean COLOR_VALUES = true;
     private Color[] coloringColors = null;
@@ -361,40 +351,36 @@ public final class Options {
     public static final Color DEFAULT_CELL_COLOR = Color.WHITE;                               // Hintergrund normale Zelle
     public static final Color ALTERNATE_CELL_COLOR = Color.WHITE;                             // Hintergrund normale Zelle in jedem zweiten Block
     public static final Color AKT_CELL_COLOR = new Color(255, 255, 150);                      // Hintergrund aktuell markierte Zelle
-    public static final Color INVALID_CELL_COLOR = new Color(255, 185, 185);                  // Hintergrund Zelle mit ungültigen Wert
-    public static final Color POSSIBLE_CELL_COLOR = new Color(185, 255, 185);                 // Hintergrund Zelle mit möglichem Wert
+    public static final Color INVALID_CELL_COLOR = new Color(242, 188, 185);                  // Hintergrund Zelle mit ungültigen Wert
+    public static final Color POSSIBLE_CELL_COLOR = new Color(207, 239, 232);                 // Hintergrund Zelle mit möglichem Wert
     public static final Color HINT_CANDIDATE_BACK_COLOR = new Color(63, 218, 101);            // Hintergrund Kandidat in Hinweis
-    public static final Color HINT_CANDIDATE_DELETE_BACK_COLOR = new Color(255, 118, 132);    // Hintergrund für zu löschende Kandidaten
+    public static final Color HINT_CANDIDATE_DELETE_BACK_COLOR = new Color(255,  94, 106);    // Hintergrund für zu löschende Kandidaten
     public static final Color HINT_CANDIDATE_CANNIBALISTIC_BACK_COLOR = new Color(235, 0, 0); // Hintergrund für zu löschende Kandidaten
     public static final Color HINT_CANDIDATE_FIN_BACK_COLOR = new Color(127, 187, 255);       // Hintergrund für Fins
-    public static final Color HINT_CANDIDATE_ENDO_FIN_BACK_COLOR = new Color(216, 178, 255);  // Hintergrund für Endo-Fins
+    public static final Color HINT_CANDIDATE_ENDO_FIN_BACK_COLOR = new Color(213, 170, 255);  // Hintergrund für Endo-Fins
     public static final Color HINT_CANDIDATE_COLOR = Color.BLACK;                             // Zeichenfarbe Kandidat in Hinweis
     public static final Color HINT_CANDIDATE_DELETE_COLOR = Color.BLACK;                      // Zeichenfarbe für zu löschende Kandidaten
     public static final Color HINT_CANDIDATE_CANNIBALISTIC_COLOR = Color.BLACK;               // Zeichenfarbe für zu löschende Kandidaten
     public static final Color HINT_CANDIDATE_FIN_COLOR = Color.BLACK;                         // Zeichenfarbe für Fins
     public static final Color HINT_CANDIDATE_ENDO_FIN_COLOR = Color.BLACK;                    // Zeichenfarbe für Endo-Fins
     public static final Color[] HINT_CANDIDATE_ALS_BACK_COLORS = { // Hintergrund für ALS (verschieden wegen Chains und Wings)
-        new Color(197, 232, 140),
-        new Color(255, 203, 203),
-        new Color(178, 223, 223),
-        new Color(252, 220, 165)
-//        new Color(150, 150, 255),
-//        new Color(150, 255, 150),
-//        new Color(150, 100, 255),
-//        new Color(150, 255, 100)
+        new Color(113, 213, 180),
+        new Color(253, 184, 244),
+        new Color(146, 233, 242),
+        new Color(174, 225, 160)
     };
     public static final Color[] COLORKU_COLORS = {
-        new Color(252, 20, 16),
-        new Color(251, 153, 0), // a better orange
-        new Color(255, 218, 27),
-        new Color(0, 192, 41), // dark green
-//        new Color(43, 24, 255),
-        new Color(0, 45, 255),
-        new Color(221, 84, 177), // purple
-        new Color(159, 252, 51), // light green
-        new Color(144, 246, 249), // sky blue
-        new Color(255, 175, 252), // light purple (fuchsia)
-        Color.BLACK, new Color(128, 128, 128)
+        new Color(250,  25,  20),
+        new Color(255, 173,   0),
+        new Color(235, 232,   0),
+        new Color( 25, 233,  26),
+        new Color(  0, 242, 180),
+        new Color( 13, 169, 255),
+        new Color( 39,  37, 255),
+        new Color(181,   0, 254),
+        new Color(253,  26, 167),
+        Color.BLACK,
+        new Color(128, 128, 128)
     };
 //    public static final Color COLORKU_INVALID_COLOR = Color.BLACK;
 //    public static final Color COLORKU_DEVIATION_COLOR = new Color(128, 128, 128);
