@@ -830,13 +830,23 @@ public class SolutionStep implements Comparable<SolutionStep>, Cloneable {
                 }
                 break;
             case XY_WING:
-            case XYZ_WING:
                 str = getStepName();
                 if (art >= 1) {
                     str += ": " + values.get(0) + "/" + values.get(1);
                 }
                 if (art >= 2) {
-                    str += "/" + values.get(2) + " " + java.util.ResourceBundle.getBundle("intl/SolutionStep").getString("SolutionStep.in") + " " + getCompactCellPrint(indices);
+                    tmp = new StringBuffer(str);
+                    getCandidatesToDelete(tmp);
+                    str = tmp.toString();
+                }
+                break;
+            case XYZ_WING:
+                str = getStepName();
+                if (art >= 1) {
+                    str += ": " + values.get(0) + "/" + values.get(1) + "/" + values.get(2);
+                }
+                if (art >= 2) {
+                    str += " " + java.util.ResourceBundle.getBundle("intl/SolutionStep").getString("SolutionStep.in") + " " + getCompactCellPrint(indices);
                     tmp = new StringBuffer(str);
                     getCandidatesToDelete(tmp);
                     str = tmp.toString();
