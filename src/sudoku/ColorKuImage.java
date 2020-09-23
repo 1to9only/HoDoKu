@@ -42,10 +42,21 @@ public class ColorKuImage extends BufferedImage {
     /** The color of the image */
     private Color color = null;
 
+    /** The overlay source for inactive image */
+    private BufferedImage sourceInactiveOverlay = null;
+    /** The latest overlay loaded, for inactive caching */
+    private BufferedImage lastInactiveOverlay = null;
+
     public ColorKuImage(int size, Color color) {
         super(size, size, BufferedImage.TYPE_4BYTE_ABGR);
         this.color = color;
         createImage();
+    }
+
+    public ColorKuImage(int size, Color color,boolean isInactive) {
+        super(size, size, BufferedImage.TYPE_4BYTE_ABGR);
+        this.color = color;
+        createInactiveImage();
     }
 
     /**
@@ -94,6 +105,36 @@ public class ColorKuImage extends BufferedImage {
 
         ticks = System.nanoTime() - ticks;
 //        System.out.println("ColorKu.createImage(): " + (ticks / 1000000) + "ms");
+    }
+
+    private void createInactiveImage() {
+        // get the overlay that fits best
+        long ticks = System.nanoTime();
+        int sizeR = getWidth();
+        if (sourceInactiveOverlay == null) {
+            // not loaded -> do it
+            try {
+                sourceInactiveOverlay = ImageIO.read(getClass().getResource("/img/inactive.png"));
+            } catch (IOException ex) {
+                Logger.getLogger(ColorKuImage.class.getName()).log(Level.SEVERE, null, ex);
+                return;
+            }
+        }
+
+        // pattern already created?
+        if (lastInactiveOverlay == null || (lastInactiveOverlay != null && lastInactiveOverlay.getWidth() != sizeR)) {
+            // not created -> do it
+            lastInactiveOverlay = getScaledInstance(sourceInactiveOverlay, sizeR);
+        }
+
+        Graphics2D g2 = createGraphics();
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.setColor(color);
+        int delta = sizeR / 28;
+        g2.fillOval(delta, 0, sizeR - delta, sizeR - delta);
+        g2.drawImage(lastInactiveOverlay, 0, 0, null);
+
+        ticks = System.nanoTime() - ticks;
     }
 
 //    /**
