@@ -96,9 +96,10 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
 
     private static final long serialVersionUID = 1L;
     public static final String VERSION = "HoDoKu - v2.2.0";
-//    public static final String BUILD = "Build 16";
+	public static final String REV = "$LastChangedRevision: 116 $";
     public static final String BUILD;
-    public static final String REV = "$LastChangedRevision: 116 $";
+	private static boolean sudokuSolved = false;
+	private boolean isGameStarted = false;
     /** The size of the toggle button icons */
     private static final int TOGGLE_BUTTON_ICON_SIZE = 32;
     private SudokuPanel sudokuPanel;
@@ -1977,6 +1978,18 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
     private void neuesSpielToolButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_neuesSpielToolButtonActionPerformed
         // neues Spiel in der gewünschten Schwierigkeitsstufe erzeugen
         int actLevel = Options.getInstance().getActLevel();
+		if (actLevel == 1) {
+			if (isGameStarted && !sudokuSolved && JOptionPane.showConfirmDialog(this, "Create a new Sudoku.", "Confirm", JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION)
+				return;
+		} else if (currentLevel == null) {
+			if (isGameStarted && !sudokuSolved && JOptionPane.showConfirmDialog(this, "Create a new Sudoku.", "Confirm", JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION)
+				return;
+		} else {
+			if (isGameStarted && !sudokuSolved && currentLevel.getBackgroundColor() != Color.WHITE && JOptionPane.showConfirmDialog(this, "Create a new Sudoku.", "Confirm", JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION)
+				return;
+		}
+		isGameStarted = true;
+		setSodukuSolved(false);
         DifficultyLevel actDiffLevel = Options.getInstance().getDifficultyLevel(actLevel);
         if (Options.getInstance().getGameMode() == GameMode.LEARNING) {
             // in LEARNING ANY puzzle is accepted, that has at least one Training Step in it
@@ -3461,6 +3474,10 @@ private void extendedPrintMenuItemActionPerformed(java.awt.event.ActionEvent evt
             }
         });
     }
+
+	public void setSodukuSolved(boolean b) {
+		sudokuSolved = b;
+	}
 
     private void setTitleWithFile() {
         savePuzzleMenuItem.setEnabled(sudokuFileName != null);

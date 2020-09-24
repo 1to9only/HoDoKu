@@ -1830,10 +1830,13 @@ public class SudokuPanel extends javax.swing.JPanel implements Printable {
             }
             sudoku.setCell(line, col, number);
             repaint();
-            if (sudoku.isSolved() && Options.getInstance().isShowSudokuSolved()) {
-                JOptionPane.showMessageDialog(this, java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.sudoku_solved"),
+            if (sudoku.isSolved()) {
+				mainFrame.setSodukuSolved(true);
+				if (Options.getInstance().isShowSudokuSolved()) {
+					JOptionPane.showMessageDialog(this, java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.sudoku_solved"),
                         java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.congratulations"),
                         JOptionPane.INFORMATION_MESSAGE);
+				}
             }
         }
     }
@@ -3290,10 +3293,13 @@ public class SudokuPanel extends javax.swing.JPanel implements Printable {
             checkProgress();
             mainFrame.check();
             repaint();
-            if (sudoku.isSolved() && Options.getInstance().isShowSudokuSolved()) {
-                JOptionPane.showMessageDialog(this, java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.sudoku_solved"),
+            if (sudoku.isSolved()) {
+				mainFrame.setSodukuSolved(true);
+				if (Options.getInstance().isShowSudokuSolved()) {
+					JOptionPane.showMessageDialog(this, java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.sudoku_solved"),
                         java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.congratulations"),
                         JOptionPane.INFORMATION_MESSAGE);
+				}
             }
         }
     }
