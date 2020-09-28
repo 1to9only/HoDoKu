@@ -468,7 +468,7 @@ private void tabPrintMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//
     public void initialize(List<String> titels, List<List<SolutionStep>> solutions) {
         if (titels.size() != solutions.size()) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, 
-                    "SolutionPanel.initialize(): titels and solutions don''t have the same length " + "({0}/{1})", 
+                    "SolutionPanel.initialize(): titles and solutions don''t have the same length " + "({0}/{1})", 
                     new Object[]{titels.size(), solutions.size()});
         }
         int size = titels.size();
