@@ -22,6 +22,19 @@ http://hodoku.sourceforge.net/
 ```
 ### Change log
 
+#### Version 2.2.1 (Build 125) [2020-09-28]
+
+This release is equivalent to @CCV54's HoDoKu_221.jar
+
+- ask to 'Confirm' when 'Create a new Sudoku.'
+- fix hint for three candidates XYZ-Wing
+- add ColorKu inactive image filter
+- use default colors from @CCV54's HoDoKu_221.jar
+- fix typo in keyboard.html
+- use images from @CCV54's HoDoKu_221.jar
+- fix buttons 3/4/5 selection from ColorKu color panel
+- fix typo in HintToolButton.toolTipText
+
 #### Version 2.2.0 (2020-09-21)
 
 This release is equivalent to hobiwan's 2.2.0 Hodoku.jar [HoDoKu - v2.2.0 (Build 116)] released 2012-07-29
