@@ -728,7 +728,7 @@ public class ExtendedPrintProgressDialog extends javax.swing.JDialog implements 
      * 
      */
     private void showMessageDialog() {
-        int ret = JOptionPane.showConfirmDialog(null, 
+        int ret = JOptionPane.showConfirmDialog(this, 
                 java.util.ResourceBundle.getBundle("intl/ExtendedPrintProgressDialog").getString("ExtendedPrintProgressDialog.flipPaper"),
                 java.util.ResourceBundle.getBundle("intl/ExtendedPrintProgressDialog").getString("ExtendedPrintProgressDialog.flipPaperTitle"),
                 JOptionPane.OK_CANCEL_OPTION);

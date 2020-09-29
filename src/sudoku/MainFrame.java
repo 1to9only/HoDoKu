@@ -1891,7 +1891,7 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
                 msgf.applyPattern(java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.file_exists"));
                 String warning = msgf.format(args);
                 String title = java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.hint");
-                if (JOptionPane.showConfirmDialog(null, warning, title, JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION) {
+                if (JOptionPane.showConfirmDialog(this, warning, title, JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION) {
                     return;
                 }
             }
@@ -2169,7 +2169,7 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
                 boolean doYes = true;
                 if (!sudokuPanel.getSudoku().checkUserCands()) {
                     // necessary candidates are missing!
-                    int ret = JOptionPane.showConfirmDialog(null,
+                    int ret = JOptionPane.showConfirmDialog(this,
                             java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.candidatesMissing"),
                             java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.error"),
                             JOptionPane.YES_NO_CANCEL_OPTION);
@@ -3167,7 +3167,7 @@ private void extendedPrintMenuItemActionPerformed(java.awt.event.ActionEvent evt
                     msgf.applyPattern(java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.file_exists"));
                     String warning = msgf.format(args);
                     String title = java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.hint");
-                    if (JOptionPane.showConfirmDialog(null, warning, title, JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION) {
+                    if (JOptionPane.showConfirmDialog(this, warning, title, JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION) {
                         return;
                     }
                 }
