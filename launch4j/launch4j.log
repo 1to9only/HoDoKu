@@ -1,52 +1,27 @@
 
 
-CmdLine:	D:\Projekte\Java\HoDoKu\launch4j\hodoku.exe --l4j-debug
-WOW64:		no
-Check launcher:	 (n/a)
+Version:	3.12
+CmdLine:	D:\Hodoku-2.2.1\Hodoku.exe --l4j-debug
+WOW64:		yes
+Java min ver:	1.008.000
+Java max ver:	
 64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
-32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
-Ignore:		SOFTWARE\JavaSoft\Java Runtime Environment\1.6
-Match:		SOFTWARE\JavaSoft\Java Runtime Environment\1.6.0_07
-Match:		SOFTWARE\JavaSoft\Java Runtime Environment\1.6.0_10
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Check launcher:	C:\Program Files\Java\jre1.8.0_261\bin\javaw.exe (OK)
+Match:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_261
+Check launcher:	C:\Program Files\Java\jre1.8.0_261\bin\javaw.exe (OK)
+Match:		1.008.000_261
 64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
-32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
-Ignore:		SOFTWARE\JavaSoft\Java Development Kit\1.6
-Ignore:		SOFTWARE\JavaSoft\Java Development Kit\1.6.0_07
-Ignore:		SOFTWARE\JavaSoft\Java Development Kit\1.6.0_10
-Check launcher:	C:\Programme\Java\jre6\bin\javaw.exe (OK)
-Unlink:		C:\Programme\Java\jre6\launch4j-tmp\hodoku.exe
-Unlink:		C:\Programme\Java\jre6\launch4j-tmp\hodoku.exe.manifest
-Unlink:		C:\Programme\Java\jre6\launch4j-tmp\launch4j.exe
-Unlink:		C:\Programme\Java\jre6\launch4j-tmp\launch4j.exe.manifest
-Copy:		C:\Programme\Java\jre6\bin\javaw.exe -> C:\Programme\Java\jre6\launch4j-tmp\hodoku.exe
-Heap -Xmx:	512 MB / 0%, Free: 1133 MB, Heap size: 512 MB
-Launcher:	C:\Programme\Java\jre6\launch4j-tmp\hodoku.exe
-Launcher args:	-Xmx512m -jar "D:\Projekte\Java\HoDoKu\launch4j\hodoku.exe"
-Args length:	59/32768 chars
-Exit code:	1
-
-
-CmdLine:	D:\Projekte\Java\HoDoKu\launch4j\hodoku.exe --l4j-debug
-WOW64:		no
-Check launcher:	 (n/a)
-64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
-32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
-Ignore:		SOFTWARE\JavaSoft\Java Runtime Environment\1.6
-Match:		SOFTWARE\JavaSoft\Java Runtime Environment\1.6.0_07
-Match:		SOFTWARE\JavaSoft\Java Runtime Environment\1.6.0_10
-64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
-32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
-Ignore:		SOFTWARE\JavaSoft\Java Development Kit\1.6
-Ignore:		SOFTWARE\JavaSoft\Java Development Kit\1.6.0_07
-Ignore:		SOFTWARE\JavaSoft\Java Development Kit\1.6.0_10
-Check launcher:	C:\Programme\Java\jre6\bin\javaw.exe (OK)
-Unlink:		C:\Programme\Java\jre6\launch4j-tmp\hodoku.exe
-Unlink:		C:\Programme\Java\jre6\launch4j-tmp\hodoku.exe.manifest
-Unlink:		C:\Programme\Java\jre6\launch4j-tmp\launch4j.exe
-Unlink:		C:\Programme\Java\jre6\launch4j-tmp\launch4j.exe.manifest
-Copy:		C:\Programme\Java\jre6\bin\javaw.exe -> C:\Programme\Java\jre6\launch4j-tmp\hodoku.exe
-Heap -Xmx:	512 MB / 0%, Free: 1112 MB, Heap size: 512 MB
-Launcher:	C:\Programme\Java\jre6\launch4j-tmp\hodoku.exe
-Launcher args:	-Xmx512m -jar "D:\Projekte\Java\HoDoKu\launch4j\hodoku.exe"
-Args length:	59/32768 chars
-Exit code:	1
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_261
+Ignore:		1.008.000_261
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.008.000_261 (64-bit)
+Heap -Xmx:	Requested 512 MB / 0%, Available: 2420 MB, Heap size: 512 MB
+Launcher:	C:\Program Files\Java\jre1.8.0_261\bin\javaw.exe
+Launcher args:	-Xmx512m -jar "D:\Hodoku-2.2.1\Hodoku.exe" /launch4j
+Args length:	52/32768 chars
+Exit code:	0

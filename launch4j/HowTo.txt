@@ -1,0 +1,18 @@
+How to wrap Hodoku.jar into a Windows Executable [Hodoku.exe]
+
+- Install launch4j - download from http://launch4j.sourceforge.net/
+
+- Drop a copy of Hodoku.jar into this folder
+
+- Start the Launch4j application
+- Load the hodoku1.xml configuration file
+- Build Hodoku.exe
+- Done
+
+- Or run Launch4jc.exe on Command Line in 32-bit Windows:
+ "C:\Program Files\Launch4j\Launch4jc.exe" hodoku1.xml
+
+- Or run Launch4jc.exe on Command Line in 64-bit Windows:
+ "C:\Program Files (x86)\Launch4j\Launch4jc.exe" hodoku1.xml
+
+
