@@ -632,6 +632,8 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
         reportErrorMenuItem = new javax.swing.JMenuItem();
         askQuestionMenuItem = new javax.swing.JMenuItem();
         jSeparator25 = new javax.swing.JPopupMenu.Separator();
+        raiseIssueMenuItem = new javax.swing.JMenuItem();
+        jSeparator52 = new javax.swing.JPopupMenu.Separator();
         aboutMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1793,6 +1795,16 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
         helpMenu.add(askQuestionMenuItem);
         helpMenu.add(jSeparator25);
 
+        raiseIssueMenuItem.setMnemonic(java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.raiseIssueMenuItem.mnemonic").charAt(0));
+        raiseIssueMenuItem.setText(bundle.getString("MainFrame.raiseIssueMenuItem.text")); // NOI18N
+        raiseIssueMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                raiseIssueMenuItemActionPerformed(evt);
+            }
+        });
+        helpMenu.add(raiseIssueMenuItem);
+        helpMenu.add(jSeparator52);
+
         aboutMenuItem.setMnemonic(java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.aboutMenuItem.").charAt(0));
         aboutMenuItem.setText(bundle.getString("MainFrame.aboutMenuItem.text")); // NOI18N
         aboutMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -2618,6 +2630,10 @@ private void extendedPrintMenuItemActionPerformed(java.awt.event.ActionEvent evt
     private void reportErrorMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportErrorMenuItemActionPerformed
         MyBrowserLauncher.getInstance().launchTracker();
     }//GEN-LAST:event_reportErrorMenuItemActionPerformed
+
+    private void raiseIssueMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
+        MyBrowserLauncher.getInstance().launchIssue();
+    }
 
     /**
      * Adjusts icons for hint toggle buttons according to the mode (normal/ColorKu) and according
@@ -4032,6 +4048,8 @@ private void extendedPrintMenuItemActionPerformed(java.awt.event.ActionEvent evt
             }
         }
     }
+    private javax.swing.JMenuItem raiseIssueMenuItem;
+    private javax.swing.JPopupMenu.Separator jSeparator52;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JRadioButtonMenuItem allStepsMenuItem;

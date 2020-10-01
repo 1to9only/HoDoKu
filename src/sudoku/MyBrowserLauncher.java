@@ -111,6 +111,14 @@ public class MyBrowserLauncher {
     }
 
     /**
+     * Display the github issues
+     */
+    public void launchIssue() {
+        String url = "https://github.com/1to9only/HoDoKu/issues";
+        browse(url);
+    }
+
+    /**
      * Tries to open the web site given by <code>url</code>
      * with an external web browser.
      * 
