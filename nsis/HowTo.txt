@@ -1,0 +1,21 @@
+How to create Hodoku Windows Installer [Hodoku-Installer.exe]
+
+- Download 'NSIS: Nullsoft Scriptable Install System' from https://sourceforge.net/projects/nsis/
+  Download the zip file - the current [latest] version is: nsis-3.06.1.zip
+
+- Unzip the file - I unzipped to D:\, so have a D:\nsis-3.06.1 folder
+
+- Drop a copy of Hodoku.exe (created in the launch4j folder) into this folder
+
+- modify line 6 of Hodoku.nsi with the correct version and build numbers
+
+- Run makensis.exe on the Command Line:
+  <path-to-nsis>\makensis.exe Hodoku.nsi
+
+  e.g. D:\nsis-3.06.1\makensis.exe Hodoku.nsi
+
+- Or use makensisw.exe - the windowed version of makensis.exe.
+
+- Done
+
+
