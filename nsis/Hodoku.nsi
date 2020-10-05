@@ -3,7 +3,7 @@
   Unicode True
 
 !define WELCOME_TEXT \
-"Setup will guide you through the installation of $(^NameDA) Version 2.2.1 (Build 125).$\r$\n$\r$\n\
+"Setup will guide you through the installation of $(^NameDA) Version 2.2.2 (Build 133).$\r$\n$\r$\n\
 It is recommended that you close all other applications before starting Setup. \
 This will make it possible to update relevant system files without having to reboot your computer.$\r$\n$\r$\n\
 IMPORTANT: If you have installed a previous $(^NameDA) (downloaded from sourceforge.net), \

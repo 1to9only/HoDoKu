@@ -22,6 +22,16 @@ http://hodoku.sourceforge.net/
 ```
 ### Change log
 
+#### Version 2.2.2 (Build 133) [2020-10-05]
+
+- updates to colors and images from @CCV54
+- how to create the Hodoku Windows Installer
+- changes to Help menu items
+- how to wrap Hodoku.jar into a Windows exe
+- center confirm dialogs on parent window instead of desktop
+- fix 225 Extended print: wrong colors
+- typo fix in SolutionPanel.java
+
 #### Version 2.2.1 (Build 125) [2020-09-28]
 
 This release is equivalent to @CCV54's HoDoKu_221.jar
