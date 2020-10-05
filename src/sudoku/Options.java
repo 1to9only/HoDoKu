@@ -250,19 +250,6 @@ public final class Options {
     private int allStepsAlsChainLength = ALL_STEPS_ALS_CHAIN_LENGTH;
     private boolean allStepsAlsChainForwardOnly = ALL_STEPS_ALS_CHAIN_FORWARD_ONLY;
     //SudokuPanel
-    // Coloring Solver
-    public static final Color[] COLORING_COLORS = {
-        new Color(255, 188,  81), // 'a' - first color of first color pair
-        new Color(255, 227, 173), // 'A' - second color of first color pair
-        new Color(179, 168, 239), // 'b' - first color of second color pair
-        new Color(223, 217, 252), // 'B' - second color of second color pair
-        new Color(255, 147, 168), // 'c' - first color of third color pair
-        new Color(255, 207, 215), // 'C' - second color of third color pair
-        new Color(142, 219, 255), // 'd' - first color of fourth color pair
-        new Color(187, 248, 255), // 'D' - second color of fourth color pair
-        new Color(122, 239, 122), // 'e' - first color of fifth color pair
-        new Color(178, 255, 178)  // 'E' - second color of fifth color pair
-    };
     public static final boolean COLOR_VALUES = true;
     private Color[] coloringColors = null;
     private boolean colorValues = COLOR_VALUES;
@@ -340,57 +327,88 @@ public final class Options {
     // Clipboard
     public static final boolean USE_ZERO_INSTEAD_OF_DOT = false; // as the name says...
     private boolean useZeroInsteadOfDot = USE_ZERO_INSTEAD_OF_DOT;
-    // Farben und Fonts
-    public static final Color GRID_COLOR = Color.BLACK;                                       // Zeichenfarbe für den Rahmen
-    public static final Color INNER_GRID_COLOR = Color.LIGHT_GRAY;                            // Linien innerhalb des Rahmens
-    public static final Color WRONG_VALUE_COLOR = Color.RED;                                  // Wert oder Kandidat an dieser Stelle nicht möglich
-    public static final Color DEVIATION_COLOR = new Color(255, 185, 185);                     // Wert oder Kandidat stimmt nicht mit Lösung überein
-    public static final Color CELL_FIXED_VALUE_COLOR = Color.BLACK;                           // vorgegebene Werte
-    public static final Color CELL_VALUE_COLOR = Color.BLUE;                                  // korrekte selbst eingegebene Zellenwerte
-    public static final Color CANDIDATE_COLOR = new Color(100, 100, 100);                     // korrekte Kandidaten
-    public static final Color DEFAULT_CELL_COLOR = Color.WHITE;                               // Hintergrund normale Zelle
-    public static final Color ALTERNATE_CELL_COLOR = Color.WHITE;                             // Hintergrund normale Zelle in jedem zweiten Block
-    public static final Color AKT_CELL_COLOR = new Color(255, 255, 150);                      // Hintergrund aktuell markierte Zelle
-    public static final Color INVALID_CELL_COLOR = new Color(242, 188, 185);                  // Hintergrund Zelle mit ungültigen Wert
-    public static final Color POSSIBLE_CELL_COLOR = new Color(207, 239, 232);                 // Hintergrund Zelle mit möglichem Wert
-    public static final Color HINT_CANDIDATE_BACK_COLOR = new Color(63, 218, 101);            // Hintergrund Kandidat in Hinweis
-    public static final Color HINT_CANDIDATE_DELETE_BACK_COLOR = new Color(255,  94, 106);    // Hintergrund für zu löschende Kandidaten
-    public static final Color HINT_CANDIDATE_CANNIBALISTIC_BACK_COLOR = new Color(235, 0, 0); // Hintergrund für zu löschende Kandidaten
-    public static final Color HINT_CANDIDATE_FIN_BACK_COLOR = new Color(127, 187, 255);       // Hintergrund für Fins
-    public static final Color HINT_CANDIDATE_ENDO_FIN_BACK_COLOR = new Color(213, 170, 255);  // Hintergrund für Endo-Fins
-    public static final Color HINT_CANDIDATE_COLOR = Color.BLACK;                             // Zeichenfarbe Kandidat in Hinweis
-    public static final Color HINT_CANDIDATE_DELETE_COLOR = Color.BLACK;                      // Zeichenfarbe für zu löschende Kandidaten
-    public static final Color HINT_CANDIDATE_CANNIBALISTIC_COLOR = Color.BLACK;               // Zeichenfarbe für zu löschende Kandidaten
-    public static final Color HINT_CANDIDATE_FIN_COLOR = Color.BLACK;                         // Zeichenfarbe für Fins
-    public static final Color HINT_CANDIDATE_ENDO_FIN_COLOR = Color.BLACK;                    // Zeichenfarbe für Endo-Fins
-    public static final Color[] HINT_CANDIDATE_ALS_BACK_COLORS = { // Hintergrund für ALS (verschieden wegen Chains und Wings)
-        new Color(113, 213, 180),
-        new Color(253, 184, 244),
-        new Color(146, 233, 242),
-        new Color(174, 225, 160)
-    };
-    public static final Color[] COLORKU_COLORS = {
-        new Color(250,  25,  20),
-        new Color(255, 173,   0),
-        new Color(235, 232,   0),
-        new Color( 25, 233,  26),
-        new Color(  0, 242, 180),
-        new Color( 13, 169, 255),
-        new Color( 39,  37, 255),
-        new Color(181,   0, 254),
-        new Color(253,  26, 167),
-        Color.BLACK,
-        new Color(128, 128, 128)
-    };
-//    public static final Color COLORKU_INVALID_COLOR = Color.BLACK;
-//    public static final Color COLORKU_DEVIATION_COLOR = new Color(128, 128, 128);
-    public static final Color[] HINT_CANDIDATE_ALS_COLORS = { // Zeichenfarbe für ALS-Candidaten
+
+    // Edit -> Preferences (in order, within tabs order)
+
+    // Border and Digits
+
+    public static final Color GRID_COLOR =             Color.BLACK;                           // Drawing color for the frame
+    public static final Color INNER_GRID_COLOR =       Color.LIGHT_GRAY;                      // Lines inside the frame
+    public static final Color CELL_FIXED_VALUE_COLOR = Color.BLACK;                           // Default values
+    public static final Color CELL_VALUE_COLOR =       new Color(  0, 102, 102);              // Correct self-entered cell values
+    public static final Color CANDIDATE_COLOR =        new Color(100, 100, 100);              // Correct candidates
+    public static final Color WRONG_VALUE_COLOR =      Color.RED;                             // Value or candidate not possible at this point
+    public static final Color DEVIATION_COLOR =        new Color(255, 185, 185);              // Value or candidate does not match the solution
+
+    // Hints
+
+    public static final Color HINT_CANDIDATE_COLOR =               Color.BLACK;               // Character color of candidate in note
+    public static final Color HINT_CANDIDATE_DELETE_COLOR =        Color.BLACK;               // Character color for candidates to be deleted
+    public static final Color HINT_CANDIDATE_FIN_COLOR =           Color.BLACK;               // Drawing color for fins
+    public static final Color HINT_CANDIDATE_ENDO_FIN_COLOR =      Color.BLACK;               // Drawing color for endo fins
+    public static final Color HINT_CANDIDATE_CANNIBALISTIC_COLOR = Color.BLACK;               // Character color for candidates to be deleted
+
+    public static final Color HINT_CANDIDATE_BACK_COLOR =               new Color( 63, 218, 101); // Background candidate in note
+    public static final Color HINT_CANDIDATE_DELETE_BACK_COLOR =        new Color(255,  94, 106); // Background for candidates to be deleted
+    public static final Color HINT_CANDIDATE_FIN_BACK_COLOR =           new Color(127, 187, 255); // Background for fins
+    public static final Color HINT_CANDIDATE_ENDO_FIN_BACK_COLOR =      new Color(213, 170, 255); // Background for endo fins
+    public static final Color HINT_CANDIDATE_CANNIBALISTIC_BACK_COLOR = new Color(235,   0,   0); // Background for candidates to be deleted
+
+    public static final Color ARROW_COLOR = Color.RED;                                        // Color for arrows
+
+    // Backgrounds/ALS
+
+    public static final Color DEFAULT_CELL_COLOR =   new Color(245, 245, 255);                // Background normal cell
+    public static final Color AKT_CELL_COLOR =       new Color(255, 255, 150);                // Background currently selected cell
+    public static final Color INVALID_CELL_COLOR =   new Color(242, 188, 185);                // Background cell with invalid value
+    public static final Color POSSIBLE_CELL_COLOR =  new Color(200, 221, 227);                // Background cell with possible value
+    public static final Color ALTERNATE_CELL_COLOR = new Color(245, 245, 255);                // Background normal cell in every other block
+
+    public static final Color[] HINT_CANDIDATE_ALS_COLORS = { // Candidate color for ALS candidates
         Color.BLACK,
         Color.BLACK,
         Color.BLACK,
         Color.BLACK
     };
-    public static final Color ARROW_COLOR = Color.RED;                                        // Farbe für Pfeile
+
+    public static final Color[] HINT_CANDIDATE_ALS_BACK_COLORS = { // Background for ALS (different because of chains and wings)
+        new Color(113, 213, 180),
+        new Color(253, 184, 244),
+        new Color(146, 233, 242),
+        new Color(174, 225, 160)
+    };
+
+    // Coloring Solver
+
+    public static final Color[] COLORING_COLORS = {
+        new Color(255, 187,  59),   // 'a' - first color of first color pair
+        new Color(247, 214, 155),   // 'A' - second color of first color pair
+        new Color(177, 149, 240),   // 'b' - first color of second color pair
+        new Color(220, 198, 251),   // 'B' - second color of second color pair
+        new Color(255, 145, 165),   // 'c' - first color of third color pair
+        new Color(255, 205, 212),   // 'C' - second color of third color pair
+        new Color(137, 216, 255),   // 'd' - first color of fourth color pair
+        new Color(187, 248, 255),   // 'D' - second color of fourth color pair
+        new Color(122, 239, 122),   // 'e' - first color of fifth color pair
+        new Color(178, 255, 178)    // 'E' - second color of fifth color pair
+    };
+
+    // ColorKu
+
+    public static final Color[] COLORKU_COLORS = {
+        new Color(234,  26,  45),   // 1
+        new Color(255, 147,   0),   // 2
+        new Color(220, 205,   0),   // 3
+        new Color( 63, 205,   0),   // 4
+        new Color(  4, 230, 115),   // 5
+        new Color(  0, 193, 219),   // 6
+        new Color( 10,  58, 225),   // 7
+        new Color(151,   0, 239),   // 8
+        new Color(230,   2, 204),   // 9
+        Color.BLACK,                // Invalid
+        new Color(128, 128, 128)    // Deviation
+    };
+
     public static final double VALUE_FONT_FACTOR = 0.6;      // Zellengröße * valueFontFactor gibt Schriftgröße für Zellenwerte
     public static final double CANDIDATE_FONT_FACTOR = 0.25; // Zellengröße * candidateFontFactor gibt Schriftgröße für Kandidaten
     public static final double HINT_BACK_FACTOR = 1.6;       // um wie viel der Kreis beim Hint größer ist als die Zahl
