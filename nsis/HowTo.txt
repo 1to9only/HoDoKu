@@ -7,7 +7,7 @@ How to create Hodoku Windows Installer [Hodoku-Installer.exe]
 
 - Drop a copy of Hodoku.exe (created in the launch4j folder) into this folder
 
-- modify line 6 of Hodoku.nsi with the correct version and build numbers
+- modify the first line of Hodoku.nsi with the correct version and build numbers
 
 - Run makensis.exe on the Command Line:
   <path-to-nsis>\makensis.exe Hodoku.nsi

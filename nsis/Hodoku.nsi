@@ -1,9 +1,11 @@
+!define HODOKU_VERSION "Version 2.2.2 (Build 133)"
+
 ;HoDoKu Installer Script
 
   Unicode True
 
 !define WELCOME_TEXT \
-"Setup will guide you through the installation of $(^NameDA) Version 2.2.2 (Build 133).$\r$\n$\r$\n\
+"Setup will guide you through the installation of $(^NameDA) ${HODOKU_VERSION}.$\r$\n$\r$\n\
 It is recommended that you close all other applications before starting Setup. \
 This will make it possible to update relevant system files without having to reboot your computer.$\r$\n$\r$\n\
 IMPORTANT: If you have installed a previous $(^NameDA) (downloaded from sourceforge.net), \
@@ -82,7 +84,7 @@ Section "Hodoku" Hodoku
   ;Create shortcuts
   CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
   CreateShortCut  "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
-  CreateShortCut  "$SMPROGRAMS\$StartMenuFolder\Licence.lnk"   "$INSTDIR\COPYING.txt"
+  CreateShortCut  "$SMPROGRAMS\$StartMenuFolder\License.lnk"   "$INSTDIR\COPYING.txt"
   CreateShortCut  "$SMPROGRAMS\$StartMenuFolder\HoDoKu.lnk"    "$INSTDIR\Hodoku.exe"
   CreateShortCut  "$SMPROGRAMS\$StartMenuFolder\Solving Techniques (German).lnk"  "http://hodoku.sourceforge.net/de/techniques.php"
   CreateShortCut  "$SMPROGRAMS\$StartMenuFolder\Solving Techniques (English).lnk" "http://hodoku.sourceforge.net/en/techniques.php"
@@ -91,6 +93,9 @@ Section "Hodoku" Hodoku
 
   ;Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
+
+  WriteRegStr HKLM  "Software\Microsoft\Windows\CurrentVersion\Uninstall\Hodoku" "DisplayName"     "HoDoKu - ${HODOKU_VERSION}"
+  WriteRegStr HKLM  "Software\Microsoft\Windows\CurrentVersion\Uninstall\Hodoku" "UninstallString" "$\"$INSTDIR\uninstall.exe$\""
 
   !insertmacro MUI_STARTMENU_WRITE_END
 
@@ -110,6 +115,7 @@ Section "Uninstall"
   Delete "$SMPROGRAMS\$StartMenuFolder\Solving Techniques (German).lnk"
   Delete "$SMPROGRAMS\$StartMenuFolder\HoDoKu.lnk"
   Delete "$SMPROGRAMS\$StartMenuFolder\Licence.lnk"
+  Delete "$SMPROGRAMS\$StartMenuFolder\License.lnk"
   Delete "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk"
   RMDir  "$SMPROGRAMS\$StartMenuFolder"
 
@@ -121,5 +127,7 @@ Section "Uninstall"
   RMDir  "$INSTDIR"
 
   DeleteRegKey /ifempty HKCU "Software\HoDoKu"
+
+  DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Hodoku"
 
 SectionEnd
