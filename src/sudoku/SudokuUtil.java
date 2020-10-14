@@ -343,22 +343,22 @@ public class SudokuUtil {
     public static String getSSFormatted(String values) {
         StringBuilder tmp = new StringBuilder();
         values = values.replace('0', '.');
-        tmp.append(" *-----------*");
+        tmp.append(" *-----------------------*");
         tmp.append(NEW_LINE);
         writeSSLine(tmp, values, 0);
         writeSSLine(tmp, values, 9);
         writeSSLine(tmp, values, 18);
-        tmp.append(" |---+---+---|");
+        tmp.append(" |-------+-------+-------|");
         tmp.append(NEW_LINE);
         writeSSLine(tmp, values, 27);
         writeSSLine(tmp, values, 36);
         writeSSLine(tmp, values, 45);
-        tmp.append(" |---+---+---|");
+        tmp.append(" |-------+-------+-------|");
         tmp.append(NEW_LINE);
         writeSSLine(tmp, values, 54);
         writeSSLine(tmp, values, 63);
         writeSSLine(tmp, values, 72);
-        tmp.append(" *-----------*");
+        tmp.append(" *-----------------------*");
         tmp.append(NEW_LINE);
         return tmp.toString();
     }
@@ -373,12 +373,18 @@ public class SudokuUtil {
      */
     private static void writeSSLine(StringBuilder tmp, String clues, int startIndex) {
         tmp.append(" |");
-        tmp.append(clues.substring(startIndex + 0, startIndex + 3));
-        tmp.append("|");
-        tmp.append(clues.substring(startIndex + 3, startIndex + 6));
-        tmp.append("|");
-        tmp.append(clues.substring(startIndex + 6, startIndex + 9));
-        tmp.append("|");
+        tmp.append(" "+clues.substring(startIndex + 0, startIndex + 1));
+        tmp.append(" "+clues.substring(startIndex + 1, startIndex + 2));
+        tmp.append(" "+clues.substring(startIndex + 2, startIndex + 3));
+        tmp.append(" |");
+        tmp.append(" "+clues.substring(startIndex + 3, startIndex + 4));
+        tmp.append(" "+clues.substring(startIndex + 4, startIndex + 5));
+        tmp.append(" "+clues.substring(startIndex + 5, startIndex + 6));
+        tmp.append(" |");
+        tmp.append(" "+clues.substring(startIndex + 6, startIndex + 7));
+        tmp.append(" "+clues.substring(startIndex + 7, startIndex + 8));
+        tmp.append(" "+clues.substring(startIndex + 8, startIndex + 9));
+        tmp.append(" |");
         tmp.append(NEW_LINE);
     }
 
@@ -482,7 +488,11 @@ public class SudokuUtil {
      * @param outer 
      */
     private static void writeSSPMFrameLine(StringBuilder tmp, int maxLength, boolean outer) {
-        tmp.append(" *");
+        if (outer) {
+            tmp.append(" *");
+        } else {
+            tmp.append(" |");
+        }
         for (int i = 0; i < 3 * maxLength + 7; i++) {
             tmp.append("-");
         }
