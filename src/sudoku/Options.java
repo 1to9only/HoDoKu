@@ -454,8 +454,8 @@ public final class Options {
     private Font defaultCandidateFont = new Font(DEFAULT_CANDIDATE_FONT.getName(), DEFAULT_CANDIDATE_FONT.getStyle(), DEFAULT_CANDIDATE_FONT.getSize());
     private Font bigFont = new Font(BIG_FONT.getName(), BIG_FONT.getStyle(), BIG_FONT.getSize());
     private Font smallFont = new Font(SMALL_FONT.getName(), SMALL_FONT.getStyle(), SMALL_FONT.getSize());
-    public static final String DEFAULT_FILE_DIR = System.getProperty("user.home");
-    public static final String DEFAULT_IMAGE_DIR = System.getProperty("user.home");
+    public static final String DEFAULT_FILE_DIR = new File("").getAbsoluteFile().toString();
+    public static final String DEFAULT_IMAGE_DIR = new File("").getAbsoluteFile().toString();
     private String defaultFileDir = DEFAULT_FILE_DIR;
     private String defaultImageDir = DEFAULT_IMAGE_DIR;
     public static final String DEFAULT_LANGUAGE = "";
