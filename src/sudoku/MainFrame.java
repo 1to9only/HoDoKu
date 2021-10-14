@@ -1830,7 +1830,9 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
     }//GEN-LAST:event_loadPuzzleMenuItemActionPerformed
 
     private void configMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configMenuItemActionPerformed
-        new ConfigDialog(this, true, -1).setVisible(true);
+        ConfigDialog dlg = new ConfigDialog(this, true, -1);
+        dlg.setLocationRelativeTo(this);
+        dlg.setVisible(true);
         sudokuPanel.resetActiveColor();
         if (sudokuPanel.getActiveColor() != -1) {
             statusPanelColorResult.setBackground(Options.getInstance().getColoringColors()[sudokuPanel.getActiveColor()]);
@@ -1878,6 +1880,7 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
 
     private void speichernAlsBildMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_speichernAlsBildMenuItemActionPerformed
         WriteAsPNGDialog dlg = new WriteAsPNGDialog(this, true, bildSize, bildAufloesung, bildEinheit);
+        dlg.setLocationRelativeTo(this);
         dlg.setVisible(true);
         if (dlg.isOk()) {
             File bildFile = dlg.getBildFile();
@@ -2012,6 +2015,7 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
         if (preGenSudoku == null) {
             // no pregenrated puzzle available -> do it in GUI
             GenerateSudokuProgressDialog dlg = new GenerateSudokuProgressDialog(this, true, actDiffLevel, Options.getInstance().getGameMode());
+            dlg.setLocationRelativeTo(this);
             dlg.setVisible(true);
             tmpSudoku = dlg.getSudoku();
         } else {
@@ -2322,13 +2326,17 @@ private void solveUpToButtonActionPerformed(java.awt.event.ActionEvent evt) {//G
 }//GEN-LAST:event_solveUpToButtonActionPerformed
 
 private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
-    new AboutDialog(this, true).setVisible(true);
+    AboutDialog dlg = new AboutDialog(this, true);
+    dlg.setLocationRelativeTo(this);
+    dlg.setVisible(true);
     check();
     fixFocus();
 }//GEN-LAST:event_aboutMenuItemActionPerformed
 
 private void keyMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keyMenuItemActionPerformed
-    new KeyboardLayoutFrame().setVisible(true);
+    KeyboardLayoutFrame dlg = new KeyboardLayoutFrame();
+    dlg.setLocationRelativeTo(this);
+    dlg.setVisible(true);
     check();
     fixFocus();
 }//GEN-LAST:event_keyMenuItemActionPerformed
@@ -2469,6 +2477,7 @@ private void historyMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//G
     GuiState state = new GuiState(sudokuPanel, sudokuPanel.getSolver(), solutionPanel);
     state.get(true);
     HistoryDialog dlg = new HistoryDialog(this, true);
+    dlg.setLocationRelativeTo(this);
     dlg.setVisible(true);
     String puzzle = dlg.getSelectedPuzzle();
     if (puzzle != null) {
@@ -2506,6 +2515,7 @@ private void restoreSavePointMenuItemActionPerformed(java.awt.event.ActionEvent 
     GuiState state = new GuiState(sudokuPanel, sudokuPanel.getSolver(), solutionPanel);
     state.get(true);
     RestoreSavePointDialog dlg = new RestoreSavePointDialog(this, true);
+    dlg.setLocationRelativeTo(this);
     dlg.setVisible(true);
     if (!dlg.isOkPressed()) {
         // restore everything
@@ -2530,11 +2540,14 @@ private void practisingMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
 }//GEN-LAST:event_practisingMenuItemActionPerformed
 
 private void backdoorSearchMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backdoorSearchMenuItemActionPerformed
-    new BackdoorSearchDialog(this, true, sudokuPanel).setVisible(true);
+    BackdoorSearchDialog dlg = new BackdoorSearchDialog(this, true, sudokuPanel);
+    dlg.setLocationRelativeTo(this);
+    dlg.setVisible(true);
 }//GEN-LAST:event_backdoorSearchMenuItemActionPerformed
 
 private void setGivensMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setGivensMenuItemActionPerformed
     SetGivensDialog dlg = new SetGivensDialog(this, true);
+    dlg.setLocationRelativeTo(this);
     dlg.setVisible(true);
     if (dlg.isOkPressed()) {
         String givens = dlg.getGivens();
@@ -2598,7 +2611,9 @@ private void showHintButtonsCheckBoxMenuItemActionPerformed(java.awt.event.Actio
 }//GEN-LAST:event_showHintButtonsCheckBoxMenuItemActionPerformed
 
 private void extendedPrintMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_extendedPrintMenuItemActionPerformed
-    new ExtendedPrintDialog(this, true).setVisible(true);
+    ExtendedPrintDialog dlg = new ExtendedPrintDialog(this, true);
+    dlg.setLocationRelativeTo(this);
+    dlg.setVisible(true);
 }//GEN-LAST:event_extendedPrintMenuItemActionPerformed
 
     private void copySSMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_copySSMenuItemActionPerformed
@@ -2736,6 +2751,7 @@ private void extendedPrintMenuItemActionPerformed(java.awt.event.ActionEvent evt
             if (showDialog) {
                 // show config dialog
                 ConfigTrainingDialog dlg = new ConfigTrainingDialog(this, true);
+                dlg.setLocationRelativeTo(this);
                 dlg.setVisible(true);
                 if (!dlg.isOkPressed()) {
                     return;
