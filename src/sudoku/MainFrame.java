@@ -2481,12 +2481,20 @@ private void historyMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//G
     dlg.setVisible(true);
     String puzzle = dlg.getSelectedPuzzle();
     if (puzzle != null) {
+        if (isGameStarted && !sudokuSolved && JOptionPane.showConfirmDialog(this, "Overwrite Sudoku.", "Confirm", JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION) {
+            // restore everything
+            setState(state);
+            state = null;
+            return;
+        }
         if (dlg.isDoubleClicked()) {
             // everything is already initialized, so dont do anything
         } else {
             // act like paste
             setPuzzle(puzzle);
         }
+        isGameStarted = true;
+        setSodukuSolved(false);
         clearSavePoints();
     } else {
         // restore everything
@@ -3339,6 +3347,12 @@ private void extendedPrintMenuItemActionPerformed(java.awt.event.ActionEvent evt
             Options.getInstance().setDefaultFileDir(path);
             path = chooser.getSelectedFile().getAbsolutePath();
             MyFileFilter filter = (MyFileFilter) chooser.getFileFilter();
+            if (puzzle) { // true=puzzle, false=configuration
+                if (isGameStarted && !sudokuSolved && JOptionPane.showConfirmDialog(this, "Overwrite Sudoku.", "Confirm", JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION)
+                    return;
+                isGameStarted = true;
+                setSodukuSolved(false);
+            }
             loadFromFile(path, filter.getType());
         }
     }
