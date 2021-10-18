@@ -347,21 +347,22 @@ public final class Options {
     public static final Color HINT_CANDIDATE_FIN_COLOR =           Color.BLACK;               // Drawing color for fins
     public static final Color HINT_CANDIDATE_ENDO_FIN_COLOR =      Color.BLACK;               // Drawing color for endo fins
     public static final Color HINT_CANDIDATE_CANNIBALISTIC_COLOR = Color.BLACK;               // Character color for candidates to be deleted
+    public static final Color ARROW_COLOR = Color.RED;                                        // Color for arrows
 
-    public static final Color HINT_CANDIDATE_BACK_COLOR =               new Color( 63, 218, 101); // Background candidate in note
+    // Hints (Backgrounds)
+
+    public static final Color HINT_CANDIDATE_BACK_COLOR =               new Color( 43, 216,  93); // Background candidate in note
     public static final Color HINT_CANDIDATE_DELETE_BACK_COLOR =        new Color(255,  94, 106); // Background for candidates to be deleted
-    public static final Color HINT_CANDIDATE_FIN_BACK_COLOR =           new Color(127, 187, 255); // Background for fins
+    public static final Color HINT_CANDIDATE_FIN_BACK_COLOR =           new Color(117, 180, 255); // Background for fins
     public static final Color HINT_CANDIDATE_ENDO_FIN_BACK_COLOR =      new Color(213, 170, 255); // Background for endo fins
     public static final Color HINT_CANDIDATE_CANNIBALISTIC_BACK_COLOR = new Color(235,   0,   0); // Background for candidates to be deleted
-
-    public static final Color ARROW_COLOR = Color.RED;                                        // Color for arrows
 
     // Backgrounds/ALS
 
     public static final Color DEFAULT_CELL_COLOR =   new Color(245, 245, 255);                // Background normal cell
     public static final Color AKT_CELL_COLOR =       new Color(255, 255, 150);                // Background currently selected cell
-    public static final Color INVALID_CELL_COLOR =   new Color(242, 188, 185);                // Background cell with invalid value
-    public static final Color POSSIBLE_CELL_COLOR =  new Color(200, 221, 227);                // Background cell with possible value
+    public static final Color INVALID_CELL_COLOR =   new Color(175, 189, 196);                // Background cell with invalid value
+    public static final Color POSSIBLE_CELL_COLOR =  new Color(198, 213, 220);                // Background cell with possible value
     public static final Color ALTERNATE_CELL_COLOR = new Color(245, 245, 255);                // Background normal cell in every other block
 
     public static final Color[] HINT_CANDIDATE_ALS_COLORS = { // Candidate color for ALS candidates
@@ -370,6 +371,8 @@ public final class Options {
         Color.BLACK,
         Color.BLACK
     };
+
+    // Backgrounds
 
     public static final Color[] HINT_CANDIDATE_ALS_BACK_COLORS = { // Background for ALS (different because of chains and wings)
         new Color(113, 213, 180),
@@ -381,10 +384,10 @@ public final class Options {
     // Coloring Solver
 
     public static final Color[] COLORING_COLORS = {
-        new Color(255, 187,  59),   // 'a' - first color of first color pair
-        new Color(247, 214, 155),   // 'A' - second color of first color pair
-        new Color(177, 149, 240),   // 'b' - first color of second color pair
-        new Color(220, 198, 251),   // 'B' - second color of second color pair
+        new Color(234, 149,   0),   // 'a' - first color of first color pair
+        new Color(255, 191,  73),   // 'A' - second color of first color pair
+        new Color(169, 123, 254),   // 'b' - first color of second color pair
+        new Color(197, 168, 248),   // 'B' - second color of second color pair
         new Color(255, 145, 165),   // 'c' - first color of third color pair
         new Color(255, 205, 212),   // 'C' - second color of third color pair
         new Color(137, 216, 255),   // 'd' - first color of fourth color pair
@@ -396,16 +399,16 @@ public final class Options {
     // ColorKu
 
     public static final Color[] COLORKU_COLORS = {
-        new Color(234,  26,  45),   // 1
-        new Color(255, 147,   0),   // 2
-        new Color(220, 205,   0),   // 3
-        new Color( 63, 205,   0),   // 4
-        new Color(  4, 230, 115),   // 5
-        new Color(  0, 193, 219),   // 6
-        new Color( 10,  58, 225),   // 7
-        new Color(151,   0, 239),   // 8
-        new Color(230,   2, 204),   // 9
-        Color.BLACK,                // Invalid
+        new Color(245,  28,  49),   // 1
+        new Color(255, 150,   0),   // 2
+        new Color(222, 203,   0),   // 3
+        new Color( 62, 205,   0),   // 4
+        new Color(  3, 226, 112),   // 5
+        new Color(  0, 184, 209),   // 6
+        new Color( 11,  58, 225),   // 7
+        new Color(158,   5, 245),   // 8
+        new Color(235,   2, 204),   // 9
+        new Color( 20,  30,  40),   // Invalid
         new Color(128, 128, 128)    // Deviation
     };
 
