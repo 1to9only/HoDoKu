@@ -1,4 +1,4 @@
-!define HODOKU_VERSION "Version 2.2.2 (Build 133)"
+!define HODOKU_VERSION "Version 2.2.3 (Build 144)"
 
 ;HoDoKu Installer Script
 

@@ -95,8 +95,8 @@ import solver.SudokuSolverFactory;
 public class MainFrame extends javax.swing.JFrame implements FlavorListener {
 
     private static final long serialVersionUID = 1L;
-    public static final String VERSION = "HoDoKu - v2.2.2";		// change this and next
-    public static final String REV = "$GitCommit: 133 $";		// use git commit number
+    public static final String VERSION = "HoDoKu - v2.2.3";		// change this and next
+    public static final String REV = "$GitCommit: 144 $";		// use git commit number
     public static final String BUILD;
 	private static boolean sudokuSolved = false;
 	private boolean isGameStarted = false;

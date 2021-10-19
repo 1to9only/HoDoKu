@@ -1,0 +1,88 @@
+                2.2.2                                                                   2.2.3           2.2.3
+Preferences     from Options.java (HoDoKu colors)                                       COLOR CHANGES   COLOR CHANGES
+-----------     ---------------------------------                                       HoDoKu colors   HoDoKu Dark colors
+                                                                                        See Issue #9    See Issue #6
+    // Edit -> Preferences (in order, within tabs order)
+                                                                                        xxx, xxx, xxx = unchanged
+    // Border and Digits
+
+Border: Grid:   GRID_COLOR =             Color.BLACK;                                   xxx, xxx, xxx   xxx, xxx, xxx   // Drawing color for the frame
+Border: Inner:  INNER_GRID_COLOR =       Color.LIGHT_GRAY;                              xxx, xxx, xxx   xxx, xxx, xxx   // Lines inside the frame
+Givens:         CELL_FIXED_VALUE_COLOR = Color.BLACK;                                   xxx, xxx, xxx   xxx, xxx, xxx   // Default values
+Values:         CELL_VALUE_COLOR =       new Color(  0, 102, 102);                      xxx, xxx, xxx     9,  76, 160   // Correct self-entered cell values
+Candidates:     CANDIDATE_COLOR =        new Color(100, 100, 100);                      xxx, xxx, xxx   xxx, xxx, xxx   // Correct candidates
+Invalid:        WRONG_VALUE_COLOR =      Color.RED;                                     xxx, xxx, xxx   xxx, xxx, xxx   // Value or candidate not possible at this point
+Deviations:     DEVIATION_COLOR =        new Color(255, 185, 185);                      xxx, xxx, xxx   xxx, xxx, xxx   // Value or candidate does not match the solution
+
+    // Hints
+
+Normal:         HINT_CANDIDATE_COLOR =               Color.BLACK;                       xxx, xxx, xxx   xxx, xxx, xxx   // Character color of candidate in note
+To delete:      HINT_CANDIDATE_DELETE_COLOR =        Color.BLACK;                       xxx, xxx, xxx   xxx, xxx, xxx   // Character color for candidates to be deleted
+Fins:           HINT_CANDIDATE_FIN_COLOR =           Color.BLACK;                       xxx, xxx, xxx   xxx, xxx, xxx   // Drawing color for fins
+Endo-Fins:      HINT_CANDIDATE_ENDO_FIN_COLOR =      Color.BLACK;                       xxx, xxx, xxx   xxx, xxx, xxx   // Drawing color for endo fins
+Cannibalism:    HINT_CANDIDATE_CANNIBALISTIC_COLOR = Color.BLACK;                       xxx, xxx, xxx   xxx, xxx, xxx   // Character color for candidates to be deleted
+Arrows:         ARROW_COLOR =                        Color.RED;                         xxx, xxx, xxx   xxx, xxx, xxx   // Color for arrows
+
+    // Hints (Backgrounds)
+
+Normal:         HINT_CANDIDATE_BACK_COLOR =               new Color( 63, 218, 101);      43, 216,  93    43, 216,  93   // Background candidate in note
+To delete:      HINT_CANDIDATE_DELETE_BACK_COLOR =        new Color(255,  94, 106);     xxx, xxx, xxx   xxx, xxx, xxx   // Background for candidates to be deleted
+Fins:           HINT_CANDIDATE_FIN_BACK_COLOR =           new Color(127, 187, 255);     117, 180, 255   117, 180, 255   // Background for fins
+Endo-Fins:      HINT_CANDIDATE_ENDO_FIN_BACK_COLOR =      new Color(213, 170, 255);     xxx, xxx, xxx   xxx, xxx, xxx   // Background for endo fins
+Cannibalism:    HINT_CANDIDATE_CANNIBALISTIC_BACK_COLOR = new Color(235,   0,   0);     xxx, xxx, xxx   xxx, xxx, xxx   // Background for candidates to be deleted
+
+    // Backgrounds/ALS
+
+Normal:         DEFAULT_CELL_COLOR =   new Color(245, 245, 255);                        xxx, xxx, xxx   240, 240, 240   // Background normal cell
+Selection:      AKT_CELL_COLOR =       new Color(255, 255, 150);                        xxx, xxx, xxx   235, 235, 135   // Background currently selected cell
+Forbidden:      INVALID_CELL_COLOR =   new Color(242, 188, 185);                        175, 189, 196   164, 173, 191   // Background cell with invalid value
+Possible:       POSSIBLE_CELL_COLOR =  new Color(200, 221, 227);                        198, 213, 220   193, 204, 219   // Background cell with possible value
+Altern:         ALTERNATE_CELL_COLOR = new Color(245, 245, 255);                        xxx, xxx, xxx   240, 240, 240   // Background normal cell in every other block
+
+    [] HINT_CANDIDATE_ALS_COLORS = { // Candidate color for ALS candidates
+ALS 1:          Color.BLACK,                                                            xxx, xxx, xxx   xxx, xxx, xxx
+ALS 2:          Color.BLACK,                                                            xxx, xxx, xxx   xxx, xxx, xxx
+ALS 3:          Color.BLACK,                                                            xxx, xxx, xxx   xxx, xxx, xxx
+ALS 4:          Color.BLACK                                                             xxx, xxx, xxx   xxx, xxx, xxx
+    };
+
+    // Backgrounds
+
+    [] HINT_CANDIDATE_ALS_BACK_COLORS = { // Background for ALS (different because of chains and wings) ains and wings)
+ALS 1:          new Color(113, 213, 180),                                               xxx, xxx, xxx   xxx, xxx, xxx
+ALS 2:          new Color(253, 184, 244),                                               xxx, xxx, xxx   xxx, xxx, xxx
+ALS 3:          new Color(146, 233, 242),                                               xxx, xxx, xxx   xxx, xxx, xxx
+ALS 4:          new Color(174, 225, 160)                                                xxx, xxx, xxx   xxx, xxx, xxx
+    };
+
+    // Coloring Solver
+
+    [] COLORING_COLORS = {
+Pen A:          new Color(255, 187,  59),   // 'a' - first color of first color pair    234, 149,   0   234, 149,   0
+                new Color(247, 214, 155),   // 'A' - second color of first color pair   255, 191,  73   255, 191,  73
+Pen B:          new Color(177, 149, 240),   // 'b' - first color of second color pair   169, 123, 254   169, 123, 254
+                new Color(220, 198, 251),   // 'B' - second color of second color pair  197, 168, 248   197, 168, 248
+Pen C:          new Color(255, 145, 165),   // 'c' - first color of third color pair    xxx, xxx, xxx   xxx, xxx, xxx
+                new Color(255, 205, 212),   // 'C' - second color of third color pair   xxx, xxx, xxx   xxx, xxx, xxx
+Pen D:          new Color(137, 216, 255),   // 'd' - first color of fourth color pair   xxx, xxx, xxx   xxx, xxx, xxx
+                new Color(187, 248, 255),   // 'D' - second color of fourth color pair  xxx, xxx, xxx   xxx, xxx, xxx
+Pen E:          new Color(122, 239, 122),   // 'e' - first color of fifth color pair    xxx, xxx, xxx   xxx, xxx, xxx
+                new Color(178, 255, 178)    // 'E' - second color of fifth color pair   xxx, xxx, xxx   xxx, xxx, xxx
+    };
+
+    // ColorKu Colors
+
+    [] COLORKU_COLORS = {
+1:              new Color(234,  26,  45),   // 1                                        245,  28,  49   245,  28,  47
+2:              new Color(255, 147,   0),   // 2                                        255, 150,   0   255, 144,   0
+3:              new Color(220, 205,   0),   // 3                                        222, 203,   0   222, 199,   0
+4:              new Color( 63, 205,   0),   // 4                                         62, 205,   0    62, 205,   0
+5:              new Color(  4, 230, 115),   // 5                                          3, 226, 112     3, 224, 111
+6:              new Color(  0, 193, 219),   // 6                                          0, 184, 209     0, 181, 205
+7:              new Color( 10,  58, 225),   // 7                                         11,  58, 225    11,  60, 225
+8:              new Color(151,   0, 239),   // 8                                        158,   5, 245   160,   6, 245
+9:              new Color(230,   2, 204),   // 9                                        235,   2, 204   228,   0, 196
+Invalid:        Color.BLACK,                // Invalid                                   20,  30,  40     0,  20,  30
+Deviation:      new Color(128, 128, 128)    // Deviation                                xxx, xxx, xxx   xxx, xxx, xxx
+    };
+
