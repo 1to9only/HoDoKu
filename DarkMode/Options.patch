@@ -1,0 +1,54 @@
+--- "Hodoku-2.2.3\\src\\sudoku\\Options.java"	2021-10-17 14:33:43.341696900 +0100
++++ "Hodoku-2.2.3-Dark\\src\\sudoku\\Options.java"	2021-10-14 11:26:21.946838400 +0100
+@@ -335,7 +335,7 @@
+     public static final Color GRID_COLOR =             Color.BLACK;                           // Drawing color for the frame
+     public static final Color INNER_GRID_COLOR =       Color.LIGHT_GRAY;                      // Lines inside the frame
+     public static final Color CELL_FIXED_VALUE_COLOR = Color.BLACK;                           // Default values
+-    public static final Color CELL_VALUE_COLOR =       new Color(  0, 102, 102);              // Correct self-entered cell values
++    public static final Color CELL_VALUE_COLOR =       new Color(  9,  76, 160);              // Correct self-entered cell values
+     public static final Color CANDIDATE_COLOR =        new Color(100, 100, 100);              // Correct candidates
+     public static final Color WRONG_VALUE_COLOR =      Color.RED;                             // Value or candidate not possible at this point
+     public static final Color DEVIATION_COLOR =        new Color(255, 185, 185);              // Value or candidate does not match the solution
+@@ -359,11 +359,11 @@
+ 
+     // Backgrounds/ALS
+ 
+-    public static final Color DEFAULT_CELL_COLOR =   new Color(245, 245, 255);                // Background normal cell
+-    public static final Color AKT_CELL_COLOR =       new Color(255, 255, 150);                // Background currently selected cell
+-    public static final Color INVALID_CELL_COLOR =   new Color(175, 189, 196);                // Background cell with invalid value
+-    public static final Color POSSIBLE_CELL_COLOR =  new Color(198, 213, 220);                // Background cell with possible value
+-    public static final Color ALTERNATE_CELL_COLOR = new Color(245, 245, 255);                // Background normal cell in every other block
++    public static final Color DEFAULT_CELL_COLOR =   new Color(240, 240, 240);                // Background normal cell
++    public static final Color AKT_CELL_COLOR =       new Color(235, 235, 135);                // Background currently selected cell
++    public static final Color INVALID_CELL_COLOR =   new Color(164, 173, 191);                // Background cell with invalid value
++    public static final Color POSSIBLE_CELL_COLOR =  new Color(193, 204, 219);                // Background cell with possible value
++    public static final Color ALTERNATE_CELL_COLOR = new Color(240, 240, 240);                // Background normal cell in every other block
+ 
+     public static final Color[] HINT_CANDIDATE_ALS_COLORS = { // Candidate color for ALS candidates
+         Color.BLACK,
+@@ -399,16 +399,16 @@
+     // ColorKu
+ 
+     public static final Color[] COLORKU_COLORS = {
+-        new Color(245,  28,  49),   // 1
+-        new Color(255, 150,   0),   // 2
+-        new Color(222, 203,   0),   // 3
++        new Color(245,  28,  47),   // 1
++        new Color(255, 144,   0),   // 2
++        new Color(222, 199,   0),   // 3
+         new Color( 62, 205,   0),   // 4
+-        new Color(  3, 226, 112),   // 5
+-        new Color(  0, 184, 209),   // 6
+-        new Color( 11,  58, 225),   // 7
+-        new Color(158,   5, 245),   // 8
+-        new Color(235,   2, 204),   // 9
+-        new Color( 20,  30,  40),   // Invalid
++        new Color(  3, 224, 111),   // 5
++        new Color(  0, 181, 205),   // 6
++        new Color( 11,  60, 225),   // 7
++        new Color(160,   6, 245),   // 8
++        new Color(228,   0, 196),   // 9
++        new Color(  0,  20,  30),   // Invalid
+         new Color(128, 128, 128)    // Deviation
+     };
+ 

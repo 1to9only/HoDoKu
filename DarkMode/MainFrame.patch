@@ -1,0 +1,23 @@
+--- "Hodoku-2.2.3\\src\\sudoku\\MainFrame.java"	2021-10-17 10:37:20.659174300 +0100
++++ "Hodoku-2.2.3-Dark\\src\\sudoku\\MainFrame.java"	2021-10-18 09:45:04.071696700 +0100
+@@ -82,6 +82,7 @@
+ import javax.swing.KeyStroke;
+ import javax.swing.Timer;
+ import javax.swing.UIManager;
++import com.formdev.flatlaf.*;
+ import javax.swing.event.CaretEvent;
+ import javax.swing.event.CaretListener;
+ import javax.swing.filechooser.FileFilter;
+@@ -216,6 +217,12 @@
+      */
+     @SuppressWarnings({"LeakingThisInConstructor", "unchecked"})
+     public MainFrame(String launchFile) {
++        try {
++            UIManager.setLookAndFeel( new FlatDarkLaf());
++        }
++        catch (Exception e) {
++            System.err.println( "Failed to initialize FlatDarkLaf().");
++        }
+         // if a configuration file is given at the command line, load it before anything
+         // else is done (helps restoring the screen layout)
+         if (launchFile != null && launchFile.endsWith("." + configFileExt)) {
