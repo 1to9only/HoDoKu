@@ -237,6 +237,10 @@ public class SudokuGenerator {
         }
         int level = 0;
         while (true) {
+            // a sanity check to avoid infinite loops. #11 @PseudoFish fix
+            if (anzTries >= MAX_TRIES) {
+                break;
+            }
             // get the next unsolved cells with the fewest number of candidates
             if (stack[level].sudoku.getUnsolvedCellsAnz() == 0) {
                 // sudoku is solved
