@@ -685,6 +685,11 @@ public class SolutionStep implements Comparable<SolutionStep>, Cloneable {
         return toString(2);
     }
 
+    // #12 @PseudoFish fix
+    public boolean isGiveUp() {
+        return type == SolutionType.GIVE_UP;
+    }
+
     /**
      * art == 0: Kurzform
      * art == 1: Mittellang
