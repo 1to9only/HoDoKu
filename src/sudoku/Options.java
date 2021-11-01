@@ -864,6 +864,12 @@ public final class Options {
 
     public static void readOptions(String fileName) {
         Logger.getLogger(Options.class.getName()).log(Level.INFO, "Reading options from {0}", fileName);
+        // #15 @PseudoFish fix
+        File file = new File(fileName);
+        if (file.exists() && file.length() == 0) {
+            System.err.println(fileName+" is corrupted, deleting...");
+            file.delete();
+        }
         try {
             XMLDecoder in = new XMLDecoder(new BufferedInputStream(new FileInputStream(fileName)));
             instance = (Options) in.readObject();
