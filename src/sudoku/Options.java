@@ -459,6 +459,8 @@ public final class Options {
     private Font smallFont = new Font(SMALL_FONT.getName(), SMALL_FONT.getStyle(), SMALL_FONT.getSize());
     public static final String DEFAULT_FILE_DIR = new File("").getAbsoluteFile().toString();
     public static final String DEFAULT_IMAGE_DIR = new File("").getAbsoluteFile().toString();
+    public static final String USER_FILE_DIR = System.getProperty("user.home");
+    public static final String USER_IMAGE_DIR = System.getProperty("user.home");
     private String defaultFileDir = DEFAULT_FILE_DIR;
     private String defaultImageDir = DEFAULT_IMAGE_DIR;
     public static final String DEFAULT_LANGUAGE = "";
@@ -520,6 +522,13 @@ public final class Options {
         colorKuColors = new Color[COLORKU_COLORS.length];
         for (int i = 0; i < COLORKU_COLORS.length; i++) {
             colorKuColors[i] = new Color(COLORKU_COLORS[i].getRGB());
+        }
+
+        if ( defaultFileDir.contains("Program Files") ) {
+            defaultFileDir = USER_FILE_DIR;
+        }
+        if ( defaultImageDir.contains("Program Files") ) {
+            defaultImageDir = USER_IMAGE_DIR;
         }
 
 //    public static final Font DEFAULT_VALUE_FONT = new Font("Tahoma", Font.PLAIN, 10);     // Standard für Zellenwerte (Größe wird ignoriert)
