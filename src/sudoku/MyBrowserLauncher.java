@@ -71,6 +71,14 @@ public class MyBrowserLauncher {
     }
 
     /**
+     * Get HoDoKu Documentation English (For Offline viewing)
+     */
+    public void launchOfflineDocEng() {
+        String url = "https://github.com/1to9only/HoDoKu-Doc-Eng-Offline";
+        browse(url);
+    }
+
+    /**
      * Displays the user manual.
      */
     public void launchUserManual() {

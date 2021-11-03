@@ -624,6 +624,8 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
         resetViewMenuItem = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
         keyMenuItem = new javax.swing.JMenuItem();
+        jSeparator16 = new javax.swing.JPopupMenu.Separator();
+        offlineDocEngMenuItem = new javax.swing.JMenuItem();
         jSeparator26 = new javax.swing.JPopupMenu.Separator();
         userManualMenuItem = new javax.swing.JMenuItem();
         solvingGuideMenuItem = new javax.swing.JMenuItem();
@@ -1746,6 +1748,16 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
             }
         });
         helpMenu.add(keyMenuItem);
+        helpMenu.add(jSeparator16);
+
+        offlineDocEngMenuItem.setMnemonic(java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.offlineDocEngMenuItem.mnemonic").charAt(0));
+        offlineDocEngMenuItem.setText(bundle.getString("MainFrame.offlineDocEngMenuItem.text")); // NOI18N
+        offlineDocEngMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                offlineDocEngMenuItemActionPerformed(evt);
+            }
+        });
+        helpMenu.add(offlineDocEngMenuItem);
         helpMenu.add(jSeparator26);
 
         userManualMenuItem.setMnemonic(java.util.ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.userManualMenuItem.mnemonic").charAt(0));
@@ -2452,6 +2464,10 @@ private void cellZoomMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//
     //initializeResultPanels();
     repaint();
 }//GEN-LAST:event_cellZoomMenuItemActionPerformed
+
+private void offlineDocEngMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offlineDocEngMenuItemActionPerformed
+    MyBrowserLauncher.getInstance().launchOfflineDocEng();
+}//GEN-LAST:event_offlineDocEngMenuItemActionPerformed
 
 private void userManualMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userManualMenuItemActionPerformed
     MyBrowserLauncher.getInstance().launchUserManual();
@@ -4132,6 +4148,7 @@ private void extendedPrintMenuItemActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JPopupMenu.Separator jSeparator23;
     private javax.swing.JSeparator jSeparator24;
     private javax.swing.JPopupMenu.Separator jSeparator25;
+    private javax.swing.JPopupMenu.Separator jSeparator16;
     private javax.swing.JPopupMenu.Separator jSeparator26;
     private javax.swing.JPopupMenu.Separator jSeparator27;
     private javax.swing.JPopupMenu.Separator jSeparator28;
@@ -4221,6 +4238,7 @@ private void extendedPrintMenuItemActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JRadioButtonMenuItem summaryMenuItem;
     private javax.swing.JMenuItem undoMenuItem;
     private javax.swing.JButton undoToolButton;
+    private javax.swing.JMenuItem offlineDocEngMenuItem;
     private javax.swing.JMenuItem userManualMenuItem;
     private javax.swing.JMenuItem vageHintMenuItem;
     private javax.swing.ButtonGroup viewButtonGroup;
