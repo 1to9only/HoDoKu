@@ -22,6 +22,14 @@ http://hodoku.sourceforge.net/
 ```
 ### Change log
 
+#### Version 2.2.4 (Build 150) [2022-01-05]
+
+- add help option to get offline Eng docs
+- Fix Save Puzzle Error (for installed Hodoku), #13
+- hodoku.hcfg corrupted Config Bug, @PseudoFish fix, #15
+- Solve up to Bug, @PseudoFish fix, #12
+- Infinite Loop Bug, @PseudoFish fix, #11
+
 #### Version 2.2.3 (Build 144) [2021-10-19]
 
 - Dark Mode stuff, #6
@@ -31,7 +39,7 @@ http://hodoku.sourceforge.net/
 - default folder changed from user Home folder to Hodoku folder
 - add hint to message when next Hint/Step not available
 - some typo fixes
-- improvements to Copy for SimpleSudoku output                       b
+- improvements to Copy for SimpleSudoku output
 - remove forms from src/sudoku folder
 - add uninstall thru windows control panel (w10 settings)
 

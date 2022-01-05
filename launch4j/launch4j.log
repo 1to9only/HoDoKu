@@ -1,27 +1,27 @@
 
 
-Version:        3.14
-CmdLine:        D:\Hodoku-2.2.3\Hodoku.exe --l4j-debug
-WOW64:          yes
-Java min ver:   1.008.000
-Java max ver:
-64-bit search:  SOFTWARE\JavaSoft\Java Runtime Environment...
-Check:          SOFTWARE\JavaSoft\Java Runtime Environment\1.8
-Check launcher: C:\Program Files\Java\jre1.8.0_301\bin\javaw.exe (OK)
-Match:          1.008.000
-Check:          SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_301
-Check launcher: C:\Program Files\Java\jre1.8.0_301\bin\javaw.exe (OK)
-Match:          1.008.000_301
-64-bit search:  SOFTWARE\JavaSoft\Java Development Kit...
-Check:          SOFTWARE\JavaSoft\Java Development Kit\1.8
-Ignore:         1.008.000
-Check:          SOFTWARE\JavaSoft\Java Development Kit\1.8.0_301
-Ignore:         1.008.000_301
-64-bit search:  SOFTWARE\JavaSoft\JRE...
-64-bit search:  SOFTWARE\JavaSoft\JDK...
-Runtime used:   1.008.000_301 (64-bit)
-Heap -Xmx:      Requested 512 MB / 0%, Available: 2372 MB, Heap size: 512 MB
-Launcher:       C:\Program Files\Java\jre1.8.0_301\bin\javaw.exe
-Launcher args:  -Xmx512m -jar "D:\Hodoku-2.2.3\Hodoku.exe" /launch4j
-Args length:    52/32768 chars
-Exit code:      0
+Version:	3.14
+CmdLine:	D:\Hodoku-2.2.4\Hodoku.exe --l4j-debug
+WOW64:		yes
+Java min ver:	1.008.000
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Check launcher:	C:\Program Files\Java\jre1.8.0_311\bin\javaw.exe (OK)
+Match:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_311
+Check launcher:	C:\Program Files\Java\jre1.8.0_311\bin\javaw.exe (OK)
+Match:		1.008.000_311
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_311
+Ignore:		1.008.000_311
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.008.000_311 (64-bit)
+Heap -Xmx:	Requested 512 MB / 0%, Available: 2458 MB, Heap size: 512 MB
+Launcher:	C:\Program Files\Java\jre1.8.0_311\bin\javaw.exe
+Launcher args:	-Xmx512m -jar "D:\Hodoku-2.2.4\Hodoku.exe" /launch4j
+Args length:	52/32768 chars
+Exit code:	0
